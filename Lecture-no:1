@@ -1,0 +1,205 @@
+# Simple programm:
+
+# print("Hello Rao")
+
+# Simple program print two sencence same lines
+
+# print("MY name is Rao Hammad." , "My age is 22.")
+
+# Variables is print values.
+
+# name = "Rao"
+# age = 34
+# prince = 23.56
+# a = None
+# old = False
+
+# print("my name is :", name)
+# print("my age is :", age)
+
+# Check the types of Variables .
+
+# print(type(name))
+# print(type(age))
+# print(type(a))
+# print(type(old))
+
+# Sum of two numbers:
+
+# sum = 0
+
+# c = 5
+# b = 45
+# sum = c + b
+# print(sum)
+
+# Difference :
+# sub = 0
+# Sub = c - b
+# print(Sub)
+
+# Comments in python 
+
+# # is single line 
+
+# Multi-line Comments:
+"""
+Hi Rao
+how are you
+what's up
+"""
+
+# Arithmetic Operators:
+
+d = 5
+e = 10
+
+# print(d + e)
+# print(d - e)
+# print(d / e)
+# print(d * e)
+# print(e % d) # Find out Remainder.
+# print(d ** e) # Find out Power of interger d^e
+
+# Relational Operators:
+
+f = 5
+g = 3
+
+# print(f == g) # False 
+# print(f != g) # True
+# print(f > g) # True
+# print(f < g) # False
+# print(f <= g) # False
+# print(f >= g) # True
+
+# Assignments Operators:
+
+num = 10
+
+# num = num + 10 # 10+10 = 20
+# num += 10 # 10+10 = 20
+# print("num :", num)
+
+# num -= 10 # 10-10 = 0
+# print("num :", num)
+
+# num *= 10 # 10*10 = 100
+# print("num :", num)
+
+# num /= 5 # 10/5 = 2
+# print("num :", num)
+
+# num %= 5 # 10%5 = 0
+# print("num :", num)
+
+# num **= 5 # 10**5 = 100000
+# print("num :", num)
+
+# Logical Operators (not, and or)
+
+# Not is uses basically one values:
+# n = 50
+# l = 20
+# print(not False)
+# print(not (n > l))
+
+# And is uses two values if both values are ture than answer will be true:
+
+# val1 = True
+# val2 = True
+# print("And operator:", val1 and val2)
+
+# Or is uses two values if one is ture than answe will be true.
+
+# a = 50
+# b = 30
+# print("Or operator:", (a == b) or (a > b))
+
+# Type Conversion:
+
+# a = 2
+# b = 4.34
+# sum = a + b
+# print(sum)
+
+# Type Casting:
+
+# a = int("2") # String convert integer
+# b = 4.35
+
+# print(type(a))
+
+# print(a + b)
+
+# Input in Python:
+
+# name = input("Enter your name:")
+
+# val = input("Enter some value:")
+
+# print("Welcome  ", name)
+# print("Enter some" , val)
+
+# # Input Values always print string datatype.
+# print(type(name))
+# print(type(val))
+
+# Type Casting :
+# val = int(input("enter some value:"))
+# print(type(val), val)
+
+# name = input("Enter name: ")
+# age = int(input("Enter age:"))
+# marks = float(input("Enter marks:"))
+
+# print("   ")
+
+# print("wellcome" , name)
+# print("age = " , age)
+# print("marks =", marks)
+
+# Practice Question:
+
+# 1) Write a Program to input 2 numbers & print their sum.
+
+# num1 = int(input("Enter the first num: "))
+
+# num2 = int(input("Enter the second num: "))
+
+# sum = 0
+
+# sum = num1 + num2
+
+# print("The Sum of two numbers: ", sum)
+
+# 2) Write a program WAP to input side of a square & print its area.
+
+# Side = float(input("Enter Square Side :"))
+
+
+# Area = Side * Side
+
+# print(" Area of Square ", Area)
+
+# 3) Write a program WAP to input 2 floating point numbers & print their average.
+
+# a = float(input("Enter the of a: "))
+
+# b = float(input("Enter the of b: "))
+
+# Avg = (a + b) / 2
+
+# print("The Average of Point is: ", Avg)
+
+# 4) Write a program WAP to input 2 int num a and b.
+# Print True if a is great than or equal to b . if not print False.
+
+a = int(input("Enter the number of a: "))
+
+b = int(input("Enter the number of b: "))
+
+if a >= b:
+    print("True")
+else:
+    print("Flase")

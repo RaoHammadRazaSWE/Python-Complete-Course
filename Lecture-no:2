@@ -1,0 +1,171 @@
+# Escape Sequence Characters: newline \n , Tab \t
+
+# str1 = "This is a string . \n we are creating it in python"
+
+# str1 = "This is a string . \t we are creating it in python"
+
+# print(str1)
+
+# Two String ko Concatenation :
+
+# str1 = "Rao"
+# str2 = "Hammad"
+# print(str1 + str2)
+
+# 2 string ko final string ma print kr na:
+
+# final_str = str1 + " " + str2
+# print(final_str)
+
+# Length of String
+
+# print(len(final_str))
+
+# len2 = len(str2)
+
+# print(len2)
+
+# Indexing ko Print krna:
+
+# str = "Rao Hammad "
+# ch = str[0]
+# print(ch)
+
+# Slicing : Accessing parts of a string. ending idx is not included.
+# str1 = "Rao Hammad"
+# print(str1 [1:4])
+
+# Last tak jana ka method.
+# print(str1[2:len(str1)])
+
+# print(str1[5:]) # 5 say end tak jana chahta hai .
+
+# print(str1[:4]) # [0:4] tak jana chahta hai.
+
+# Slicing ko Negative Index ma bhi uses kr sakta hai.
+# print(str1[-7:-1])
+
+# str = "i am studying python from Youtube"
+# print(str.endswith("ube")) # True.
+
+# Capitalize()
+# print(str.capitalize())
+# str = str.capitalize()
+# print(str)
+
+# Replace()
+# print(str.replace("o" , "a"))
+
+# Find() index word.
+# print(str.find("o"))
+
+# Count() koi world katine bar ai hai.
+# print(str.count("o"))
+
+# Qno: 1 WAP to input user's first name & print its length.
+
+# name = input("Enter the user name: ")
+# print("Your name is " , (name))
+
+# str = "Hi, $Iam the $ symbol $99.99"
+# print(str.count("$"))
+
+# Conditional Statements:
+
+# light = "yellow"
+
+# if (light == "red"):
+#     print("stop")
+# elif (light == "green"):
+#     print("go")
+# elif (light == "yellow"):
+#     print("look")
+# else :
+#     print("light is broken") # This is indentation 4 space.
+    
+# print("End of Code")
+
+# age = 22
+
+# if (age >= 18):
+#     print("can vote")
+# else:
+#     print("cannot vote")
+
+# Conditional Statements:
+# Grade students based on marks.
+
+# marks = int(input("Enter the Student marks: "))
+
+# if ( marks >= 90 ):
+#     Grade = "A"
+# elif (marks >= 80 and marks < 90):
+#     Grade = "B"
+# elif (marks >= 70 and marks < 80):
+#     Grade = "C"
+# elif (marks >= 60 and marks < 70):
+#     Grade = "D"
+# elif (marks >= 50 and marks < 60):
+#     Grade = "E"
+# elif (marks >= 40 and marks < 50):
+#     Grade = "F"
+# else:
+#     print("Invalid Values")
+# print("Grade of the Student ->" ,Grade)
+
+# Nesting IF
+# age = 45
+# if(age >= 18):
+#     if(age >= 34):
+#         print("cannot drive")
+#     else:
+#         print("can drive") 
+# else:
+#     print("cannot drive")
+
+# Qno: 2 WAP to check if a number entered by the user is odd or even.
+
+# num = int(input("Enter the number: "))
+
+# rem = num % 2
+
+# if (rem == 0):
+#     print("The number is Even" , num)
+    
+# else:
+#     print("The number is odd" , num)    
+
+# Qno: 2 WAP to find the greatest of 3 numbers entered by the user.
+
+# a = int(input("Enter first numbe: "))
+# b = int(input("Enter second numbe: "))
+# c = int(input("Enter third numbe: "))
+# d = int(input("Enter fourth numbe: "))
+
+# if (a >= b and a >= c):
+#     print("The first number is largest ", a)
+# elif (b >= c and b >= c):
+#     print("The second number is largest ", b)
+# elif (c >= d and c >= d):
+#     print("The third number is largest " , c)
+# else:    
+#     print("The fourth number is largest " , d)
+
+# Qno:3 WAP to check if a number is a multiple of 7 or not.
+
+# x = int(input("Enter number: "))
+
+# if ( x % 7 == 0):
+#     print("multiple of  7 ")
+# else:
+#     print("not a multiple")    
+
+
+def count_words(string):
+    words = string.split()  # Split the string into a list of words
+    return len(words)       # Return the number of words in the list
+
+# Test the function
+input_string = input("Enter a string: ")
+word_count = count_words(input_string)
+print("Number of words:", word_count)

@@ -1,0 +1,194 @@
+# Dictionary in python:
+
+# info = {
+#     "key" :"value",
+#     "name" : "Rao Hammad",
+#     "learing" : "coding",
+#     "age" : 35
+# }
+
+# print(info)
+# print(type(info))
+
+# it is imposible print one by one element.
+# print(info["name"])
+
+# it is imposibel to cahane values:
+
+# info["name"] = "Ali"
+# info["surname"] = "Raza"
+# print(info)
+
+# it is imposible we are create null dictionry.
+
+# null_dict = {}
+
+# it is imposible  to add null_dict values
+# null_dict["name"] = "Whaba"
+# print(null_dict)
+
+# Nested Dictionaries:
+
+# student = {
+#     "Name" : "Rao",
+#     "Subjects" :{
+#         "Math" :90,
+#         "comp" :70,
+#         "chem" :80
+#     }
+# }
+
+# print(student)
+
+# print(student["Subjects"])
+
+# print(student["Subjects"] ["chem"])
+
+# Dictionary Methods:
+
+# print(student.keys())
+
+# if you want print values convert list:
+# print(list(student.keys()))
+
+# if you find list length:
+# print(len(list(student.keys())))
+
+# Values() Method:
+
+# print(student.values())
+
+# Divtionary Convert List values:
+# print(list(student.values()))
+
+# Dict.items():
+
+# print(student.items())
+
+# type cast in to list:
+# print(list(student.items()))
+
+# if you want print pairs of list:
+
+# pairs = list(student.items())
+# print(pairs[0])
+
+# print(pairs[1])
+
+# Dict.get("key"): Returns the key values.
+
+# print("Before")
+
+# Ya ek aisa error ahi jask bad kuch bhi run ni hoga ,
+# print(student["Name2"]) 
+#error beacus used this is normal taraka
+
+# print("After")
+
+# No error -> None  this is use method
+# print(student.get("Name2")) 
+
+# Updata Method:
+
+# Method: 1
+# student.update({"city" : "Lahore"})
+
+# Method: 2
+# new_dict = {"city" : "Multan"}
+# student.update(new_dict)
+# print(student)
+
+# Set in Python:
+
+# num = {1,2,3,4,5,3, "Rao"} # Set Duplication values ignore.
+
+# print(num)
+# print(type(num))
+# print(len(num))
+
+# Create empty set:syntax
+
+# empty_set = set()
+# print(type(empty_set))
+
+# Add Method:
+# empty_set.add(1)
+# empty_set.add(2)
+# empty_set.add(3)
+# empty_set.add((1,2,3,4)) # pass tuple
+# print(empty_set)
+
+# Remove Method:
+
+# empty_set.remove(2)
+# print(empty_set)
+
+# Clear() Method:
+
+# empty_set.clear()
+# print(len(empty_set))
+
+# pop(): Method:
+# collection = { "Hello" , "Rao", "coding"}
+
+# print(collection.pop())
+
+# Union(set):
+
+# set1 = {1,2,3,4}
+# set2 = {3,4,5,6}
+
+# print(set1.union(set2))
+
+# Intersection(set):
+
+# print(set1.intersection(set2))
+
+# Practice Qno: 1 stotr folloeing word meanings in a python dictionary:
+
+# dict = {
+#     "cat" : "a small animal",
+#     "table" : ["a piece of furniture", "list of facts & figures"]
+# }
+
+# print(dict)
+
+# Practice  Qno: 2 You are given a list of subjects for students.
+# Assume one classroom is required for 1 subject.
+# How many classrooms are neeeded by all students. p, j, c, js, j, c++
+
+# subjects = {'p','j','c++','p','js','j','p','j','c++','c'}
+
+# print(len(subjects))
+
+# Practice Qno: 3 Write a program of 3 subjects from the user and store
+# them in a dictionary . Start with an empty dictionary & add one by one.
+# Use subject name as key & makrs as value.
+
+# marks_dict = {}
+
+# x = int(input("Enter phy :"))
+# marks_dict.update({"phy" : x})
+
+# x = int(input("Enter math :"))
+# marks_dict.update({"math" : x})
+
+# x = int(input("Enter urdu :"))
+# marks_dict.update({"urdu" : x})
+
+# print(marks_dict)
+
+# Practice Qno: 4 figure out a way to store 9 & 9.0 as separate values 
+# in the set.(you can take help of build-in data types)
+
+# Solution 1:
+# values = {9, "9.0"}
+# print(values)
+
+# Solution 2:
+
+values = {
+    ("float", 9.0),
+    ("int", 9)
+}
+print(values)

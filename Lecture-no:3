@@ -1,0 +1,93 @@
+# List in Python:
+
+# marks = [34, 56, 67, 45, 34]
+# print(marks)
+# print(type(marks))
+# print(len(marks))
+# print(marks[0])
+
+# List Slicing:
+
+# print(marks[1:4])
+
+# List Method:
+
+list1 = ['v', 'a','c','b']
+# append: add end num
+# marks.append(98)
+# print(marks)
+
+# sort: small to long.
+# print(marks.sort())
+# print(marks)
+
+# print(list1.sort())
+# print(list1)
+
+# Decending Order:
+# print(marks.sort(reverse=True))
+# print(marks)
+
+# Reverse:
+# list1.reverse()
+# print(list1)
+
+# Insert :new element add at index.
+# list1.insert(2, 'g')
+# print(list1)
+
+# Remove:
+# list1.remove('b')
+# print(list1)
+
+# Pop : remove and the last one.
+
+# list1.pop(3)
+# print(list1)
+
+# Tuples
+# tuple1 = (2,4,6,7,1)
+# print(tuple1)
+
+# Practice Qno: 1 Write  a program enter nammes of their 3 favorite flower.
+
+# fav_flower = ["Rose", "Lily", "Daffodil"]
+# flower = []
+# flower1 = input("Enter 1st flower:")
+# flower2 = input("Enter 2nd flower:")
+# flower3 = input("Enter 3rd flower:")
+
+# another method:
+# flower.append(input("Enter 1st flower:"))
+
+# flower.append(flower1)
+# flower.append(flower2)
+# flower.append(flower3)
+
+# print(flower)
+
+# Practice Qno: 2 write a program to check if a list contains a
+# palindrome of elements.(Hint: use copy() method)
+
+# list = [1,2,1,3]
+# list1 = [1,2,3]
+
+# copy_list = list.copy()
+# copy_list.reverse()
+
+# if (copy_list == list):
+#     print("Palindrome")
+# else:
+#     print("Not Palindrome")
+
+# Practice Qno : 3 write a program to count the number of students 
+# with the "A" grade in the following tuple.
+
+tuple1 = ("A", "D" , "A", "C", "A")
+print(tuple1.count("A"))
+
+# list & sort them from "A" to "D".
+list1 = ["A", "D" , "E", "F", "B" , "C"]
+
+list1.sort()
+print(list1)

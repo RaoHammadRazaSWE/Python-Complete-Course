@@ -1,0 +1,181 @@
+# While Loop:
+
+# count = 1 # i or count : iterator
+# while count <= 5 : # iteration
+#     print("Hello")
+#     count +=1
+    
+# Practice Qno: 1 print numbers from 1 to 12.
+
+# i = 1
+# while i <= 12:
+#     print(i)
+#     i += 1
+
+# Practice Qno: 2 print numbers from 12 to 1.
+
+# i = 12
+# while i>=1:
+#     print(i)
+#     i -= 1
+
+# Practice Qno: 3 print the multiplication table of a number n.
+
+# n = int(input("Enter the number : "))
+
+# i = 1
+# while i <= 10:
+#     print(f" {n} time {i}  is = { n * i}")
+#     i += 1
+
+# Practice Qno: 4 print the elements of the following list using a loop:
+
+# nums = [1,4,9,16,25,36,49,81,100]
+
+# This method is called Traverse .
+
+# idx = 0
+# while idx < len(nums):
+#     print(nums[idx])
+#     idx += 1
+    
+# Practice Qno: 4 Search for a number x  in this tuple using loop:
+
+# nums = (1,4,9,16,25,36,49,81,100)
+
+# x = 36
+
+# i = 0
+# while i < len(nums):
+#     if(nums[i] == x):
+#         print("Found at idx ", i)
+#         break # This  statement will be stop of print.
+#     else:
+#         print("Finding...")
+#     i += 1
+    
+# print("end of loop")
+
+# i = 0
+# while i <= 10:
+#     # if(i%2 == 0): # print odd number
+#     if(i%2 != 0): # Print even number
+#         i += 1
+#         continue # Skip the iternation
+#     print(i)
+#     i += 1
+
+# FOR LOOP:
+
+# list  = [1,2,3,4,5]
+
+# for i in list:
+#     print(i)
+    
+# else: # Ya iss liya uses krta hai jab huma loop ko end tak krna hota hai
+#     print("End")
+    
+# Practice Qno: 1 Print the elements of the following list using a loop:
+
+# nums = [1,4,9,16,25,36,49,81,100]
+
+# for i in nums:
+#     print(i)
+    
+# Practice Qno: 2 Search for a number x  in this tuple using loop:
+
+# This method is called Linear Search:
+
+# nums = (1,4,9,16,25,36,49,81,100,36)
+
+# x = 36
+
+# idx = 0
+# for i in nums:
+#     if(i == x):
+#         print("Found at idx ", idx)
+#     idx += 1    
+# else:
+#     print("end of loop")
+
+# RANGE(): Basically range write three method.
+
+# seq = range(4)
+# for i in seq:
+
+# for i in range(10): # range(stop)
+#     print(i)
+
+# for i in range(2, 10): # range(start, stop)
+#     print(i)
+
+# for i in range(2, 10 , 2): # range(start, stop, step)
+#     print(i)
+
+# print Even numbers:
+# for i in range(2, 20 , 2):
+#     print(i)
+
+# Print odd numbers:
+# for i in range(1, 20 , 2):
+#     print(i)
+
+# Practice  Question No: 1 Print num 1 to 100:
+
+# for i in range (1,21):
+#     print(i)
+    
+# Practice  Question No: 2 Print num 100 to 1:
+
+# for i in range (21, 0, -1):
+#     print(i)
+
+# Practice  Question No: 3 Print the multiplication table of num n.
+
+# n = int(input("Enter the number : "))
+
+# i = 1
+# for i in range (11):
+#     print(f" {n} time {i}  is = { n * i}")
+#     i += 1
+
+# PASS STATEMENTS: it is used when not work loop empty
+
+# for i in range(5):
+#     pass
+# print("Some useful work")
+
+# Practice  Question No: 1 WAP to find the sum of first nature numbers.
+
+# Using while loop:
+
+# n  = int(input("Enter the numbers: "))
+# sum = 0
+# i = 1
+# while i <= n:
+#     sum += i
+#     i += 1
+# print("total sum of numbers" , sum)
+
+# Using for loop:
+# for i in range(1 , n+1):
+#     sum += i
+# print("total sum of numbers" , sum)
+
+# Practice  Question No: 2 WAP to find the factorial of first nature numbers.
+
+# Using while loop:
+# n  = int(input("Enter the numbers: "))
+# fact = 1
+# i = 1
+# while i <= n:
+#     fact *= i
+#     i += 1
+# print("factorial of numbers" , fact)
+
+# Using For loop:
+n  = int(input("Enter the numbers: "))
+fact = 1
+for i in range(1, n+1):
+    fact *= i
+print("factorial of numbers: " , fact)

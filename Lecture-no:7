@@ -1,0 +1,228 @@
+# File I/o Python
+
+# Python can be used to perform operations on a file.(read & write data)
+
+# Types of all files 
+
+# 1. Text files: .txt, .docx, .log etc.
+
+# 2. Binary Files: .mp4, .move, .png. jpeg etc.
+
+# Open, red & close File
+
+# We have to open a file before reading or writing.
+
+# Syntax of f = open("file_name", "mode")
+
+# Sample.txt   r: read mode
+
+# demo.docx    w: write mode
+
+# Reading a File:
+
+# f = open("demo.txt", "r")
+# data = f.read(5)
+# print(data)
+# print(type(data))
+
+# f.close()
+
+# Reads one line at a time:
+
+# data = f.readlines()
+
+# f = open("demo.txt", "r")
+
+# line1 = f.readline()
+# print(line1)
+
+# line2 = f.readline()
+# print(line2)
+
+# f.close()
+
+# Writing to a file:
+
+# There are two type of Write mode :
+
+# "w" is write over
+
+# "a" is append add at the end.
+
+# f = open("demon.txt", "w")
+
+# f = open("demon.txt", "a")
+
+# f.write("\nThen I'll move to Reacrtjs")
+
+# f.close()
+
+# If anyone file cannot exist then this method is create file.
+# f = open("sample.txt", "w")
+# f.close()
+
+# no : 1 mode
+
+# 'r+' Open for reading and writing. The stream is positioned at the
+# beginning of the file. (Pointer start ma hoga) no truncate
+
+# Truncate mean Delete data from file . 
+# No Truncate mean not Delete data from file . 
+
+# f = open("sample.txt", "r+")
+# f.write("abc")
+# print(f.read())
+# f.close()
+
+# no : 2 mode
+
+# 'W+' Open for reading and writing. the file is created if it does not
+# exist, otherwise it is truncated. The stream is positioned at the
+# beginning of the file. truncate
+
+# f = open("sample.txt", "w+")
+# print(f.read())
+# f.write("abc")
+# f.close()
+
+# no : 3 mode
+
+# a+ this is append mode (Pointer end ma ho ga) no truncate 
+
+# With Syntax: This is a better method from write and read file.
+
+# This is not used close() because With is automatic close().
+
+# with open("demo.txt", "a") as f:
+#     data = f.read()
+
+# Read Data:
+# with open("demo.txt", "r") as f:
+#     data = f.read()
+#     print(data)
+
+# Write Data:
+# with open("demo.txt", "w") as f:
+#     f.write("new data")
+    
+# Deleting a File
+
+# Using the os module :
+# Module (like a code library) is a file written by another programmer
+# that generally has a functions we can use.
+
+# Syntax: import os
+# os.remove("filename")
+
+# External Model install method:
+
+# pip install Tenserflow
+
+# if above code is not work then write another method blew:
+
+# pip3 install Tenserflow
+
+# If you went to delet file the blew code help you.
+# import os
+
+# os.remove("sample.txt")
+
+# Let's Practice Question:
+
+# Q:1 Create a new file "practice.txt" using python. Add the following
+# data in it:
+
+# with open("practice.txt", "w") as f:
+#     f.write("Hi everyone\nwe are learning File I/O\n")
+#     f.write("using java.\nI like Programming in java.")
+    
+# Q:2 WAF that replace all occurrences of "java" with "python" in above
+# file.
+
+# First of all read data and chaning data:
+
+# with open("practice.txt", "r") as f:
+#     data = f.read()
+    
+# new_data = data.replace("java", "Python")
+# print(new_data)
+
+# # Step overwrite data:
+
+# with open("practice.txt", "w") as f:
+#     f.write(new_data)
+    
+# Q:3 Search if the word "learning" exists in the file or not:
+
+# word = "learning"
+# with open("practice.txt", "r") as f:
+#     data = f.read()
+#     if(data.find(word) != -1):
+#         print("Found")
+#     else:
+#         print("Not Found")
+
+# If you want convert function last Question :
+
+# def check_for_word():
+#     word = "Rao"
+#     with open("practice.txt", "r") as f:
+#         data = f.read()
+#         if(data.find(word) != -1):
+# Above the blew line choose one better is my opiner blew line:
+#         if(Word in data):
+#             print("Found")
+#         else:
+#             print("Not Found")
+            
+# check_for_word()
+
+# Q:4 WAF to find in which line of the file does the word "learning"
+# occur first. print -1 if word not found.
+
+# def check_for_line():
+#     word = "Hammad"
+#     data = True
+#     line_no = 1
+#     with open("practice.txt", "r") as f:
+#         while data:
+#             data = f.readline()
+#             if(word in data):
+#                 print(line_no)
+#                 return
+#             line_no += 1
+            
+#     return -1
+
+# print(check_for_line())
+
+# Q:5 From a file containing numbers separated by comma,
+# print the count of even numbers.
+
+# This is simple method:
+
+# with open("practice.txt", "r") as f:
+#     data = f.read()
+#     print(data)
+#     num = ""
+#     for i in range(len(data)):
+#         if(data[i] == ","):
+#             print(int(num))
+#             num = ""
+#         else:
+#             num += data[i]
+    
+# Better and Advance method:
+
+# First step individual number take out.
+# Second step:Passe / casting to integer number.
+
+count = 0
+with open("practice.txt", "r") as f:
+    data = f.read()
+    print(data)
+    nums = data.split(",")
+    for val in nums:
+        if(int(val) % 2 == 0):
+            count += 1
+print(count)

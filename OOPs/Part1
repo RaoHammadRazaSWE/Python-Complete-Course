@@ -1,0 +1,204 @@
+# OOP in Python:
+
+# To map with real world scenarios, we started using objects in code.
+# this is called object oriented programming.
+
+# Class & Object in Python
+
+# Class is a blueprint for creating objects.
+
+# Creating class
+
+# class Student:
+#     name = "Rao Hammad Raza"
+    
+# Creating object (instance)
+
+# s1 = Student()
+# print(s1.name)
+
+# class Car:
+#     color = "Red"
+#     brand = "mercedes"
+    
+# car1 = Car()
+# print(car1.color)
+# print(car1.brand)
+
+# __init__Function:
+
+# Constructor: All classes have a function called _init_(), which is
+# always executed when the class is being initiated.
+
+# class Student:
+    
+#     # Default Constructors:
+#     def __init__(self):
+#         pass
+    
+    # Parameterized Constructors:
+#     def __init__(self, name, marks):
+#         # In this place Self name means object create 
+#         self.name = name # self means create new objects
+#         self.marks = marks
+#         print("Adding new student in Database.")
+    
+# s1 = Student("Rao Hammad Raza", 97)
+# print(s1.name, s1.marks)
+
+# The self parameter is a referance to the current instance of the class,
+# and is used to access variables that belongs to the class.
+
+# The data stored in side the class or Object is called attribute.
+# For example: (s2.name)
+
+# s2 = Student("Ali", 85)
+# print(s2.name, s2.marks)
+
+# Class & Instance Attributes: Attributes mean anydata for ex: marks,
+# name etc.
+
+# class Student:
+    
+#     # Class Attributes:
+#     college_name = "GPGC" # This is store memeory only one time.
+    
+#     # Class Attributes 
+#     name = "anonymous" 
+    
+#     def __init__(self, name, marks):
+#         self.name = name # object Attr > Class Attr Always High proverity object Attr.
+#         self.marks = marks
+#         print("Adding new student in Database...")
+    
+# s1 = Student("Rao Hammad Raza", 97)
+# print(s1.name, s1.marks)
+
+# print(Student.college_name)
+
+# Methods: Methods are functions that belong to objects.
+
+# For example: Car color , size is called object and car function start,
+# break is called Method.
+
+# class Student: # This is a class Attribute.
+
+# There are two type of Attribute: Class and Object.
+    # college_name = "ABC"
+
+    # This is constructor. There are two type of constructor: 
+    # 1. Parameterized Constructor
+    # 2. Dafult Constructor
+    
+#     def __init__(self, fullname, marks): 
+#         self.name = fullname # This is a Object Attribute.
+#         self.marks = marks
+        
+#         # This is a Method: Basically Method is called Function.
+#     def hello(self):
+#         print("Hello",self.name)
+        
+#     def get_marks(self):
+#         return self.marks
+    
+# # Using method:
+
+# # Creating Object.
+# s1 = Student("Rao Hammad Raza", 96)
+# s1.hello()
+# print(s1.get_marks())
+
+# Practice: Q1. Create student Class that take name & marks of 3 subjects
+# as argumetns in constructor. Then create a method to print the average.
+
+# class Student:
+#     def __init__(self, name, marks):
+#         self.name = name
+#         self.marks = marks
+        
+#     def get_avg(self):
+#         sum = 0
+#         for val in self.marks:
+#             sum += val
+#         print("Hi", self.name, "your avg score is:", sum/3)
+# s1 = Student("Rao Hammad Raza", [99, 98, 97])
+# s1.get_avg()
+
+# if you want to change attribute name:
+
+# s1.name = "Ali"
+# s1.get_avg()
+
+# Static Methods: Methods that don't use the self parameter
+# (work at class level)
+
+# class Student:
+#     @staticmethod  # Decorator
+#     def hello():
+#         print("Hello")
+# s1 = Student()
+# s1.hello()
+
+# @ Decorators allow us to wrap another function in order to extend the 
+# behaviour of the wrapped function, without permanently modifying it.
+
+# Important 
+
+# Four Pillary of OOPS:
+
+# 1 Abstraction: Hiding the implementation details of a class and only 
+# Showing the essential features to the user.
+
+# class Car:
+#     def __init__(self):
+#         self.name = False
+#         self.brk = False
+#         self.clutch = False
+        
+#     def start(self):
+#         self.clutch = True
+#         self.acc = True
+#         print("Car Started ...")
+        
+# car1 = Car()
+# car1.start()
+
+# 2 Encapsulation: Wrapping data and functions into a single unit(object).
+
+# Let's Practice:
+# Create Account class with 2 attributes - balance & account no.
+# Create method for debit, credit & priint the balance. 
+
+class Account:
+    def __init__(self, bal, acc):
+        self.balance = bal
+        self.account_no = acc
+        
+    # debit method
+    def debit(self, amount):
+        self.balance -= amount
+        print("Rs.", amount, "was debited")
+        print("total balance = ", self.get_balance())
+            
+    # credit method
+    def credit(self, amount):
+        self.balance += amount
+        print("Rs.", amount, "was credited")
+        print("total balance = ", self.get_balance())
+            
+            
+    def get_balance(self):
+        return self.balance
+        
+acc1 = Account(10000, 12345) # Balance and Account number.
+acc1.debit(1000)
+acc1.credit(500)
+acc1.credit(50000)
+acc1.debit(10000)
+    
+# Note: These two topics will be covered in the next part below,
+# meaning in the next lecture
+
+# 3 Inheritance:
+
+# 4 Polymorphis:

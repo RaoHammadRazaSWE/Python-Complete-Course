@@ -1,0 +1,321 @@
+# Del Keyword : used to delete object properties or object itself.
+
+# class Student:
+#     def __init__(self,name):
+#         self.name = name
+        
+# s1 = Student("Rao")
+# print(s1.name)
+
+# del s1.name
+# print(s1.name)
+
+# Private(like) attributes & methods
+
+# Conceptual Implementations in Python: Private attributes & methods
+# are meant to be used only within the class and are not accessible
+# from outside the class.
+
+# class Account:
+#     def __init__(self, acc_no, acc_pass):
+#         self.acc_no = acc_no
+#         self.__acc_pass = acc_pass # Brin attribute private.
+        
+#     # Hum class ka under to access kr sakta hai But bhir ni.
+#     def reset_pass(self):
+#         print(self.__acc_pass)
+# acc1 = Account("12345", "abcde")
+
+# print(acc1.acc_no)
+# print(acc1.reset_pass())
+
+# Create another Class:
+
+# class Person:
+#     __name = "anonymous"
+    
+#     def __hello(self):
+#         print("Hello person!")
+    
+#     def welcome(self):
+#         self.__hello()
+        
+# p1 = Person()
+# # Bhir koi access ni kr sakta method ko.
+# print(p1.welcome())
+
+# Inheritance: When one class(child/derived) derives the properties
+# & method of another class(parent/base).
+
+# class Car:
+#     color = "black"
+#     @staticmethod
+#     def start():
+#         print("Car Started...")
+        
+#     @staticmethod
+#     def stop():
+#         print("Car stopped.")
+        
+# class ToyotaCar(Car):
+#     def __init__(self, name):
+#             self.name = name
+# car1 = ToyotaCar("fortuner")
+# car2 = ToyotaCar("Prius")
+
+# print(car1.name)
+
+# print(car1.start())
+
+# print(car1.color)
+
+# Inheritance are three different types:
+
+# Single Inheritance
+
+# Multi-level Inheritance
+
+# Multiple Inheritance
+
+# Example of Multi_level Inheritance:
+# class Car:
+#     @staticmethod
+#     def start():
+#         print("Car Started...")
+        
+#     @staticmethod
+#     def stop():
+#         print("Car stopped.")
+        
+# class ToyotaCar(Car):
+#     def __init__(self, brand):
+#         self.name = brand
+        
+# class Fortuner(ToyotaCar):
+#     def __init__(self, type):
+#         self.type = type
+        
+# car1 = Fortuner("diesel")
+# car1.start()
+
+# Multiple Inheritance Example:
+
+# class A:
+#     varA = "welcome to class A"
+    
+# class B:
+#     varB = "welcome to class B"
+    
+# class C(A, B):
+#     varC = "welcome to class C"
+    
+# c1 = C()
+
+# print(c1.varC)
+# print(c1.varB)
+# print(c1.varA)
+
+# Super Method: Super() method is used to access methods of the parent
+# class . Basicaly Super mean Parent Class.
+
+# class Car:
+#     def __init__(self, type):
+#         self.type = type
+        
+#     @staticmethod
+#     def start():
+#         print("Car Started...")
+        
+#     @staticmethod
+#     def stop():
+#         print("Car stopped.")
+        
+# class ToyotaCar(Car):
+#     def __init__(self, name, type):
+#         # if we are used Parent class then we call super.
+#         super().__init__(type)
+#         self.name = name
+#         super().start()
+
+# car1 = ToyotaCar("prius", "electric")
+# print(car1.type)
+
+# Class Method: A class method is bound to the class & receives the
+# class as an implicit fist argument.
+
+# Note: Static method can't access or modify class state & generally
+# for utility. 
+
+# There are three type of of class method:
+# 1) Static methods 2) Class methods 3) Instance method.
+
+# class Person:
+#     name = "anonymous"
+    
+    # def changeName(self, name):
+        # M1 Change class Attribute method.
+        
+        # Person.name = name
+        
+        # M2 Change class Attribute method.
+        
+        # self.__class__.name = "Rao"
+        
+    # This change directail class attribute.
+#     @classmethod
+#     def changeName(cls,name):
+#         cls.name = name
+
+# p1 = Person()
+# p1.changeName("Rao Hammad Raza")
+# print(p1.name)
+# print(Person.name)
+
+# Property : We use @property decorator on any method in the class to
+# use the method as a property.
+
+# class Student:
+#     def __init__(self, phy, chem, math):
+#         self.phy = phy
+#         self.chem = chem
+#         self.math = math
+        
+#     # def calcPercentage(self):
+#     #     self.percentage = str((self.phy + self.chem + self.math) / 3) + "%"
+        
+#     # Better method:
+#     @property
+#     def percentage(self):
+#         return str((self.phy + self.chem + self.math) / 3) + "%"
+    
+        
+# stu1 = Student(83, 75, 99)
+# print(stu1.percentage)
+
+# stu1.phy = 90
+
+# print(stu1.percentage)
+
+# Polymorphism : Operator Overloading: when the same operator is
+# allowed to have different meaning according to the context.
+
+# This is operator Overloading:
+
+# print(1 + 3) # 4
+# print(type(1))
+
+# print("Rao" + "Raza") # Concatenate
+# print(type("Rao"))
+
+# print([1,2,3] + [4,5,6]) # Merge
+# print(type([1,2,3]))
+
+# Operator & Dunder Functions
+
+# a + b #addition  a.__add__(b)
+# a - b #addition  a.__sub__(b)
+# a * b #addition  a.__mul__(b)
+# a / b #addition  a.__truediv__(b)
+# a % b #addition  a.__mod__(b)
+
+# class Complex:
+#     def __init__(self, real, img):
+#         self.real = real
+#         self.img = img
+        
+#     def showNumber(self):
+#         print(self.real, "i +", self.img, "j")
+        
+#         # This is a Dunder function: add
+#     def __add__(self, num2):
+#         newReal = self.real + num2.real
+#         newImg = self.img + num2.img
+#         return Complex(newReal, newImg)
+    
+#         # This is a Dunder function: sub
+#     def __sub__(self, num2):
+#         newReal = self.real - num2.real
+#         newImg = self.img - num2.img
+#         return Complex(newReal, newImg)
+        
+# num1 = Complex(1, 3)
+# num1.showNumber()
+
+# num2 = Complex(5, 6)
+# num2.showNumber()
+
+# # print("_________")
+
+# # num3 = num1 + num2 # it is not possible only Dunder functions use.
+# # num3.showNumber()
+
+# print("_________")
+
+# num3 = num1 - num2
+# num3.showNumber()
+
+# Let's Practice:
+
+# Qs 1. Define a Circle class to create a circle with radius r using the
+# constructor. Define an Area() method of the class which calculates the
+# area of the circle. Define a Perimeter() method of the class which allows
+# you to calculate the perimeter of the circle.
+
+# class Circle:
+#     def __init__(self, radius):
+#         self.radius = radius
+        
+#     def area(self):
+#         return (22/7) * self.radius ** 2
+
+#     def perimeter(self):
+#         return 2 * (22/7) * self.radius
+    
+# c1 = Circle(21)
+# print(c1.area())
+# print(c1.perimeter())
+
+# Qs 2. Define a Employee class with attributes role, department & salary.
+# This class also a showDetails() method.
+
+# Create an Engineer class that inherits properties from Employee & has
+# additional attributes:name & age.
+
+# Basically this is how inheritance work:
+
+# class Employee:
+#     def __init__(self, role, dept, salary):
+#         self.role = role
+#         self.dept = dept
+#         self.salary = salary
+        
+#     def showDetails(self):
+#         print("role =", self.role)
+#         print("dept =", self.dept)
+#         print("salary =", self.salary)
+        
+# class Engineer(Employee):
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#         super().__init__("Engineer", "IT", "75,000")
+        
+# engg1 = Engineer("Rao Hammad Raza", 22)
+# engg1.showDetails()
+
+# Qs 3. Create a Class called Order which stores item & its price.
+# Use Dunder function __gt__() to convey that:
+# order1 > order2 if price of order1 > price of order2.
+
+class Order:
+    def __init__(self, item, price):
+        self.item = item
+        self.price = price
+    
+    def __gt__(self, odr2): # This is great then Dunder function.
+        return self.price > odr2.price
+    
+odr1 = Order("chips", 20)
+odr2 = Order("tea", 15)
+
+print(odr1 > odr2)

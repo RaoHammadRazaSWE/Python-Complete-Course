@@ -1,0 +1,149 @@
+def evens_and_odds(num):
+    """
+    Count the number of even and odd numbers in the given positive integer.
+
+    Parameters:
+    num (int): The positive integer to be analyzed.
+
+
+    Return:
+    Tuple : A tuple containing the count of even and odd numbers.
+    """
+    if num <= 0:
+        return "Please Enter the positive integer."
+    total_even = total_odd = 0
+
+    for digit in str(num):
+
+        if int(digit) % 2 == 0:
+           total_even += 1
+        else:
+           total_odd  += 1
+    return total_even , total_odd
+
+# Example:
+result = evens_and_odds(100)
+print(f"The number  of even are {result[0]}.")
+print(f"The number of odd are {result[1]}.")
+
+def evens_and_odds(start, end):
+    """
+    Count the number of even and odd numbers in the given range.
+
+    Parameters:
+    start (int): The starting number of the range.
+    end (int): The ending number of the range (exclusive).
+
+    Returns:
+    tuple: A tuple containing the count of even and odd numbers.
+    """
+    total_even = total_odd = 0
+
+    for num in range(start, end):
+        if num % 2 == 0:
+            total_even += 1
+        else:
+            total_odd += 1
+
+    return total_even, total_odd
+
+# Example usage:
+start_range = 1
+end_range = 8
+even_count, odd_count = evens_and_odds(start_range, end_range)
+
+print(f"Count of even numbers between {start_range} and {end_range}: {even_count}")
+print(f"Count of odd numbers between {start_range} and {end_range}: {odd_count}")
+
+def evens_and_odds(num):
+    """
+    Count the number of even and odd numbers in the given positive integer.
+
+    Parameters:
+    num (int): The positive integer to be analyzed.
+
+    Returns:
+    tuple: A tuple containing the count of even and odd numbers.
+    """
+    if num <= 0:
+        return "Please provide a positive integer."
+
+    total_even = total_odd = 0
+
+    for digit in str(num):
+        if int(digit) % 2 == 0:
+            total_even += 1
+        else:
+            total_odd += 1
+
+    return total_even, total_odd
+
+# Example usage:
+result = evens_and_odds(100)
+
+print(f"The number of odds are {result[1]}.")
+print(f"The number of evens are {result[0]}.")
+
+def evens_and_odds(num):
+    """
+    Count the number of even and odd digits in the given positive integer.
+
+    Parameters:
+    num (int): The positive integer to be analyzed.
+
+    Returns:
+    Tuple : A tuple containing the count of even and odd digits.
+    """
+    if num <= 0:
+        return "Please Enter a positive integer."
+
+    total_even = total_odd = 0
+
+    for digit in str(num):
+        if int(digit) % 2 == 0:
+            total_even += 1
+        else:
+            total_odd += 1
+
+    return total_even, total_odd
+
+# Example:
+user_input = int(input("Enter a positive integer: "))
+result = evens_and_odds(user_input)
+print(f"The number of even digits are {result[0]}.")
+print(f"The number of odd digits are {result[1]}.")
+
+def evens_and_odds_count():
+    """
+    Count the number of even and odd numbers in a list of integers entered by the user.
+
+    Returns:
+    Tuple : A tuple containing the count of even and odd numbers.
+    """
+    numbers = []
+
+    # Take 100 numbers as input from the user
+    for _ in range(100):
+        while True:
+            try:
+                num = int(input("Enter a number: "))
+                break
+            except ValueError:
+                print("Invalid input. Please enter a valid integer.")
+
+        numbers.append(num)
+
+    total_even = total_odd = 0
+
+    for num in numbers:
+        if num % 2 == 0:
+            total_even += 1
+        else:
+            total_odd += 1
+
+    return total_even, total_odd
+
+# Example usage:
+result = evens_and_odds_count()
+print(f"The number of even numbers is {result[0]}.")
+print(f"The number of odd numbers is {result[1]}.")
